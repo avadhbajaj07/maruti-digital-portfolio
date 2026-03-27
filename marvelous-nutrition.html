@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marvelous Nutrition — Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0a0a0a; color: #EAEAEA; font-family: 'Inter', sans-serif; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(10, 10, 10, 0.82); backdrop-filter: blur(12px); border-bottom: 1px solid #2A2A2A;
+  }
+  .nav-logo { font-size: 14px; text-transform: uppercase; color: #fff; text-decoration: none; letter-spacing: 0.1em; }
+  .nav-back { font-size: 11px; text-transform: uppercase; color: #00AEEF; text-decoration: none; border: 1px solid rgba(0,174,239,0.4); padding: 5px 12px; border-radius: 4px; }
+  .card-container { display: flex; justify-content: center; padding: 120px 20px 80px; }
+  .card { max-width: 680px; border: 0.5px solid #2A2A2A; border-radius: 16px; overflow: hidden; background: #0A0A0A; color: #EAEAEA; }
+  .hero { background: #0F0F0F; padding: 44px 40px 36px; position: relative; }
+  .hero::after { content: ''; position: absolute; top: -80px; right: -80px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(0,174,239,0.1); }
+  .badge { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #00AEEF; border: 0.5px solid rgba(0,174,239,0.5); padding: 4px 10px; border-radius: 4px; margin-bottom: 18px; display: inline-block; }
+  h1 { font-size: 34px; font-weight: 500; color: #fff; }
+  h1 em { color: #00AEEF; font-style: normal; }
+  .hero-sub { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin: 10px 0 20px; }
+  .quote { border-left: 2px solid #00AEEF; padding-left: 14px; font-style: italic; font-size: 14px; color: #aaa; margin-bottom: 26px; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 20px; }
+  .meta-label { font-size: 10px; text-transform: uppercase; color: #666; }
+  .meta-value { font-size: 13px; color: #ddd; }
+  .body { padding: 0 40px 36px; }
+  .section { padding-top: 24px; border-top: 0.5px solid #222; margin-top: 24px; }
+  .section-title { font-size: 10px; text-transform: uppercase; color: #777; margin-bottom: 14px; }
+  .about-text { font-size: 14px; line-height: 1.7; color: #bbb; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .box { border: 0.5px solid #2A2A2A; border-radius: 10px; padding: 16px; background: #141414; }
+  .box-title { font-size: 14px; color: #00AEEF; margin-bottom: 6px; }
+  .box-desc { font-size: 12px; color: #aaa; }
+  .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .feature { display: flex; gap: 10px; padding: 12px; border: 0.5px solid #2A2A2A; border-radius: 10px; background: #141414; }
+  .dot { width: 6px; height: 6px; background: #00AEEF; border-radius: 50%; margin-top: 6px; }
+  .feature-name { font-size: 12px; color: #fff; }
+  .feature-desc { font-size: 11px; color: #888; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 11px; padding: 4px 10px; border-radius: 20px; border: 0.5px solid #2A2A2A; background: #141414; color: #aaa; }
+  .footer { display: flex; justify-content: space-between; padding: 16px 40px; border-top: 0.5px solid #222; background: #111; }
+  .footer-link { font-size: 12px; color: #00AEEF; text-decoration: none; border-bottom: 0.5px solid #00AEEF; }
+  @media (max-width: 600px) { .grid, .features-grid { grid-template-columns: 1fr; } h1 { font-size: 28px; } .hero { padding: 32px 24px; } .body { padding: 0 24px 32px; } nav { padding: 16px 20px; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Maruti Digital</a>
+  <a href="index.html#portfolio" class="nav-back">← Back to Portfolio</a>
+</nav>
+
+<div class="card-container">
+  <div class="card">
+    <div class="hero">
+      <div class="badge">Portfolio Case Study</div>
+      <h1><em>Marvelous</em> Nutrition</h1>
+      <p class="hero-sub">Supplements · Performance · Science · Recovery</p>
+      <div class="quote">Premium, science-backed supplements designed for peak performance.</div>
+      <div class="meta-row">
+        <div><div class="meta-label">Industry</div><div class="meta-value">Nutrition & Supplements</div></div>
+        <div><div class="meta-label">Market</div><div class="meta-value">Europe</div></div>
+        <div><div class="meta-label">Model</div><div class="meta-value">eCommerce</div></div>
+        <div><div class="meta-label">Positioning</div><div class="meta-value">Premium / Scientific</div></div>
+      </div>
+    </div>
+    <div class="body">
+      <div class="section"><div class="section-title">About the project</div><div class="about-text">Marvelous Nutrition is a Portugal-based supplement brand delivering pharmaceutical-grade formulations for athletes and fitness enthusiasts. The website is designed to showcase premium quality, trust, and performance-driven products across the European market.</div></div>
+      <div class="section">
+        <div class="section-title">Core system</div>
+        <div class="grid">
+          <div class="box"><div class="box-title">Product Ecosystem</div><div class="box-desc">Protein, creatine, pre-workout & recovery</div></div>
+          <div class="box"><div class="box-title">Reseller Network</div><div class="box-desc">B2B distribution & partnerships</div></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Key features</div>
+        <div class="features-grid">
+          <div class="feature"><div class="dot"></div><div><div class="feature-name">Scientific Branding</div><div class="feature-desc">Clean, trust-focused UI</div></div></div>
+          <div class="feature"><div class="dot"></div><div><div class="feature-name">Product Categorization</div><div class="feature-desc">Clear supplement structure</div></div></div>
+          <div class="feature"><div class="dot"></div><div><div class="feature-name">eCommerce UX</div><div class="feature-desc">Smooth buying experience</div></div></div>
+          <div class="feature"><div class="dot"></div><div><div class="feature-name">B2B Expansion</div><div class="feature-desc">Reseller onboarding system</div></div></div>
+        </div>
+      </div>
+      <div class="section"><div class="section-title">Products</div><div class="tags"><span class="tag">Protein</span><span class="tag">Creatine</span><span class="tag">Pre-workout</span><span class="tag">Fat Burners</span><span class="tag">Recovery</span></div></div>
+    </div>
+    <div class="footer"><span>Live · marvelousnutrition.com</span><a href="https://marvelousnutrition.com/" target="_blank" class="footer-link">Visit Website →</a></div>
+  </div>
+</div>
+</body>
+</html>

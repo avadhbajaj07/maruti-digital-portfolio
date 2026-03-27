@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gokuldas Sainik School — Case Study</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f7f6; color: #2c2c2c; font-family: 'Inter', sans-serif; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(245, 247, 246, 0.82); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e7eb;
+  }
+  .nav-logo { font-size: 14px; text-transform: uppercase; color: #2f5d50; text-decoration: none; letter-spacing: 0.1em; }
+  .nav-back { font-size: 11px; text-transform: uppercase; color: #2F5D50; text-decoration: none; border: 1px solid rgba(47,93,80,0.4); padding: 5px 12px; border-radius: 4px; }
+  .card-container { display: flex; justify-content: center; padding: 120px 20px 80px; }
+  .card { max-width: 680px; border: 0.5px solid #E5E7EB; border-radius: 16px; overflow: hidden; background: #FFFFFF; color: #2C2C2C; }
+  .hero { background: #2F5D50; padding: 44px 40px 36px; position: relative; }
+  .hero::after { content: ''; position: absolute; top: -70px; right: -70px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(168,201,160,0.2); }
+  .badge { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #A8C9A0; border: 0.5px solid rgba(168,201,160,0.5); padding: 4px 10px; border-radius: 4px; margin-bottom: 18px; display: inline-block; }
+  h1 { font-size: 32px; font-weight: 500; color: #fff; }
+  h1 em { color: #A8C9A0; font-style: normal; }
+  .hero-sub { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #cfe5dc; margin: 10px 0 20px; }
+  .quote { border-left: 2px solid #6A9E7E; padding-left: 14px; font-style: italic; font-size: 14px; color: #d9efe7; margin-bottom: 26px; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 20px; }
+  .meta-label { font-size: 10px; text-transform: uppercase; color: #A8C9A0; }
+  .meta-value { font-size: 13px; color: #fff; }
+  .body { padding: 0 40px 36px; }
+  .section { padding-top: 24px; border-top: 0.5px solid #E5E7EB; margin-top: 24px; }
+  .section-title { font-size: 10px; text-transform: uppercase; color: #6B7280; margin-bottom: 14px; }
+  .about-text { font-size: 14px; line-height: 1.7; color: #444; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .box { border: 0.5px solid #E5E7EB; border-radius: 10px; padding: 16px; background: #F5F7F6; }
+  .box-title { font-size: 14px; color: #2F5D50; margin-bottom: 6px; font-weight: 600; }
+  .box-desc { font-size: 12px; color: #555; }
+  .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .feature { display: flex; gap: 10px; padding: 12px; border: 0.5px solid #E5E7EB; border-radius: 10px; background: #F5F7F6; }
+  .dot { width: 6px; height: 6px; background: #6A9E7E; border-radius: 50%; margin-top: 6px; }
+  .feature-name { font-size: 12px; color: #2F5D50; font-weight: 600; }
+  .feature-desc { font-size: 11px; color: #666; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 11px; padding: 4px 10px; border-radius: 20px; border: 0.5px solid #E5E7EB; background: #F5F7F6; color: #555; }
+  .footer { display: flex; justify-content: space-between; padding: 16px 40px; border-top: 0.5px solid #E5E7EB; background: #F5F7F6; }
+  .footer-link { font-size: 12px; color: #2F5D50; text-decoration: none; border-bottom: 0.5px solid #2F5D50; }
+  @media (max-width: 600px) { .grid, .features-grid { grid-template-columns: 1fr; } h1 { font-size: 28px; } .hero { padding: 32px 24px; } .body { padding: 0 24px 32px; } nav { padding: 16px 20px; } }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Maruti Digital</a>
+  <a href="index.html#portfolio" class="nav-back">← Back to Portfolio</a>
+</nav>
+
+<div class="card-container">
+  <div class="card">
+    <div class="hero">
+      <div class="badge">Portfolio Case Study</div>
+      <h1><em>Gokuldas</em> Sainik School</h1>
+      <p class="hero-sub">Education · Discipline · Leadership · Defence Training</p>
+      <div class="quote">Shaping future leaders with discipline, courage, and knowledge.</div>
+      <div class="meta-row">
+        <div><div class="meta-label">Type</div><div class="meta-value">Residential School</div></div>
+        <div><div class="meta-label">Curriculum</div><div class="meta-value">CBSE</div></div>
+        <div><div class="meta-label">Focus</div><div class="meta-value">Military Training</div></div>
+        <div><div class="meta-label">Location</div><div class="meta-value">Khargone</div></div>
+      </div>
+    </div>
+    <div class="body">
+      <div class="section"><div class="section-title">About the project</div><div class="about-text">Gokuldas Sainik School is a CBSE-affiliated residential institution focused on academic excellence, discipline, and leadership training. The platform is designed to communicate trust, structure, and a strong defence-oriented identity while guiding parents through admissions and school life.</div></div>
+      <div class="section">
+        <div class="section-title">Core system</div>
+        <div class="grid">
+          <div class="box"><div class="box-title">Admissions System</div><div class="box-desc">Structured process with AISSEE exam flow</div></div>
+          <div class="box"><div class="box-title">Campus Experience</div><div class="box-desc">Showcasing student life & discipline</div></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Key features</div>
+        <div class="features-grid">
+          <div class="feature"><div class="dot"></div><div><div class="feature-name">Institutional UI</div><div class="feature-desc">Trust-focused design</div></div></div>
+          <div class="feature"><div class="dot"></div><div><div class="feature-name">Admissions Flow</div><div class="feature-desc">Clear step-by-step process</div></div></div>
+          <div class="feature"><div class="dot"></div><div><div class="feature-name">Facilities Showcase</div><div class="feature-desc">Labs, sports & campus</div></div></div>
+          <div class="feature"><div class="dot"></div><div><div class="feature-name">Leadership Branding</div><div class="feature-desc">Military-inspired structure</div></div></div>
+        </div>
+      </div>
+      <div class="section"><div class="section-title">Focus Areas</div><div class="tags"><span class="tag">Academics</span><span class="tag">Discipline</span><span class="tag">NCC Training</span><span class="tag">Sports</span><span class="tag">Leadership</span></div></div>
+    </div>
+    <div class="footer"><span>Live · gokuldassainikschool.com</span><a href="https://gokuldassainikschool.com/" target="_blank" class="footer-link">Visit Website →</a></div>
+  </div>
+</div>
+</body>
+</html>
