@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} - Maruti Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-toggle" id="theme-toggle" title="Toggle Light/Dark Mode">
+        <i class="fa fa-moon"></i>
+    </div>
+
+    <div class="container">
+        <!-- Shared Left Sidebar -->
+        <aside class="left-sidebar">
+            <div class="sidebar-header">
+                <div class="logo-text">Maruti Digital</div>
+                <span class="role">Website & SaaS Developer</span>
+            </div>
+            <div class="profile-image">
+                <img src="assets/avadh bajaj half.jpeg" alt="Avadh Bajaj">
+            </div>
+            <div class="profile-info">
+                <h2>hello@avadhbajaj.com</h2>
+                <h2>Khargone, India</h2>
+                <p class="copyright">© 2026. All Rights Reserved</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <a href="index.html#contact" class="btn-primary">
+                <i class="far fa-envelope"></i> Let's Connect
+            </a>
+        </aside>
+
+        <!-- Main Project Content -->
+        <main class="main-content">
+            <header class="page-header">
+                <a href="index.html#portfolio" class="btn-outline" style="margin-bottom: 30px; display: inline-block;">
+                    <i class="fa fa-arrow-left"></i> Back to Home
+                </a>
+                <span class="category">{{CATEGORY_DISPLAY}}</span>
+                <h1>{{TITLE_MAIN}} <span>{{TITLE_SPAN}}</span></h1>
+                <p>{{SHORT_DESCRIPTION}}</p>
+            </header>
+
+            <section class="single-portfolio-content">
+                <img src="{{HERO_IMAGE}}" alt="{{TITLE}} Hero" style="width: 100%; border-radius: 30px; margin-bottom: 50px; border: 1px solid var(--border-color);">
+                
+                <div class="project-details" style="display: grid; grid-template-columns: 2fr 1fr; gap: 50px;">
+                    <div class="description">
+                        <h2>Project Overview</h2>
+                        <p style="margin: 20px 0; line-height: 1.8; color: var(--text-muted);">
+                            {{ABOUT_TEXT}}
+                        </p>
+                        
+                        <div style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px;">
+                            <h2>Core System</h2>
+                            <p style="margin: 15px 0; line-height: 1.8; color: var(--text-muted);">
+                                {{CORE_SYSTEM_TEXT}}
+                            </p>
+                        </div>
+
+                        <div style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px;">
+                            <h2>Key Features</h2>
+                            <ul style="list-style: none; padding: 0; margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                {{FEATURES_LIST}}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="meta-info" style="background: var(--card-bg); padding: 30px; border-radius: 20px; border: 1px solid var(--border-color); height: fit-content;">
+                        <h3>Project Info</h3>
+                        <ul style="list-style: none; padding: 0; margin-top: 20px;">
+                            {{META_INFO_LIST}}
+                        </ul>
+                        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                            <a href="{{LIVE_LINK}}" target="_blank" class="btn-primary" style="display: block; text-align: center; width: 100%;">
+                                Visit Website <i class="fa fa-external-link-alt" style="margin-left: 8px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

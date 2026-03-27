@@ -1,114 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dirty Squads — Case Study</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #0e0e0e; }
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px;
-    display: flex; justify-content: space-between; align-items: center;
-    background: rgba(14, 14, 14, 0.82); backdrop-filter: blur(12px); border-bottom: 1px solid #2a2a2a;
-  }
-  .nav-logo { font-size: 14px; text-transform: uppercase; color: #fff; text-decoration: none; letter-spacing: 0.1em; }
-  .nav-back { font-size: 11px; text-transform: uppercase; color: #ff4d4d; text-decoration: none; border: 1px solid rgba(255,77,77,0.4); padding: 5px 12px; border-radius: 4px; }
-  .card-container { display: flex; justify-content: center; padding: 120px 20px 80px; }
-  .card { font-family: Inter, sans-serif; max-width: 680px; border: 0.5px solid #2a2a2a; border-radius: 16px; overflow: hidden; background: #0e0e0e; color: #eaeaea; }
-  .hero { background: #111; padding: 44px 40px 36px; position: relative; overflow: hidden; }
-  .hero::after { content: ''; position: absolute; top: -80px; right: -80px; width: 260px; height: 260px; border-radius: 50%; border: 1px solid rgba(255,0,0,0.08); }
-  .badge { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #ff4d4d; border: 0.5px solid rgba(255,77,77,0.4); padding: 4px 10px; border-radius: 4px; margin-bottom: 18px; display: inline-block; }
-  h1 { font-size: 34px; font-weight: 500; color: #fff; line-height: 1.2; }
-  h1 em { color: #ff2d2d; font-style: normal; }
-  .hero-sub { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #888; margin: 10px 0 20px; }
-  .quote { border-left: 2px solid #ff2d2d; padding-left: 14px; font-style: italic; font-size: 14px; color: #bbb; margin-bottom: 26px; max-width: 420px; }
-  .meta-row { display: flex; flex-wrap: wrap; gap: 20px; }
-  .meta-item { display: flex; flex-direction: column; }
-  .meta-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #666; }
-  .meta-value { font-size: 13px; color: #ddd; }
-  .body { padding: 0 40px 36px; }
-  .section { padding-top: 24px; border-top: 0.5px solid #222; margin-top: 24px; }
-  .section:first-child { border-top: none; padding-top: 28px; margin-top: 0; }
-  .section-title { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #777; margin-bottom: 14px; }
-  .about-text { font-size: 14px; line-height: 1.7; color: #bbb; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .box { border: 0.5px solid #2a2a2a; border-radius: 10px; padding: 16px; background: #151515; }
-  .box-title { font-size: 14px; color: #fff; margin-bottom: 6px; }
-  .box-desc { font-size: 12px; color: #aaa; }
-  .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .feature { display: flex; gap: 10px; padding: 12px; border: 0.5px solid #2a2a2a; border-radius: 10px; background: #151515; }
-  .dot { width: 6px; height: 6px; background: #ff2d2d; border-radius: 50%; margin-top: 6px; }
-  .feature-name { font-size: 12px; color: #fff; }
-  .feature-desc { font-size: 11px; color: #999; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tag { font-size: 11px; padding: 4px 10px; border-radius: 20px; border: 0.5px solid #2a2a2a; background: #151515; color: #bbb; }
-  .rating-row { display: flex; align-items: center; gap: 16px; }
-  .rating-score { font-size: 40px; color: #fff; }
-  .stars { display: flex; gap: 3px; margin-bottom: 4px; }
-  .star { width: 14px; height: 14px; background: #ff2d2d; clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); }
-  .review { margin-top: 12px; font-size: 13px; color: #aaa; font-style: italic; }
-  .footer { display: flex; justify-content: space-between; align-items: center; padding: 16px 40px; border-top: 0.5px solid #222; background: #111; }
-  .footer-status { font-size: 12px; color: #888; }
-  .footer-link { font-size: 12px; color: #ff2d2d; text-decoration: none; border-bottom: 0.5px solid #ff2d2d; }
-  @media (max-width: 600px) { .grid, .features-grid { grid-template-columns: 1fr; } h1 { font-size: 28px; } .hero { padding: 32px 24px; } .body { padding: 0 24px 32px; } nav { padding: 16px 20px; } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirty Squads - Maruti Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<nav>
-  <a href="index.html" class="nav-logo">Maruti Digital</a>
-  <a href="index.html#portfolio" class="nav-back">← Back to Portfolio</a>
-</nav>
+    <div class="theme-toggle" id="theme-toggle" title="Toggle Light/Dark Mode">
+        <i class="fa fa-moon"></i>
+    </div>
 
-<div class="card-container">
-  <div class="card">
-    <div class="hero">
-      <div class="badge">Portfolio Case Study</div>
-      <h1><em>Dirty Squads</em> Fitness</h1>
-      <p class="hero-sub">Supplements · Athletes · Performance · Community</p>
-      <div class="quote">Built for those who train harder, push further, and never stay average.</div>
-      <div class="meta-row">
-        <div class="meta-item"><span class="meta-label">Industry</span><span class="meta-value">Fitness Supplements</span></div>
-        <div class="meta-item"><span class="meta-label">Model</span><span class="meta-value">eCommerce + Affiliate</span></div>
-        <div class="meta-item"><span class="meta-label">Audience</span><span class="meta-value">Gym Athletes</span></div>
-        <div class="meta-item"><span class="meta-label">Platform</span><span class="meta-value">Global</span></div>
-      </div>
+    <div class="container">
+        <aside class="left-sidebar">
+            <div class="sidebar-header">
+                <div class="logo-text">Maruti Digital</div>
+                <span class="role">Website & SaaS Developer</span>
+            </div>
+            <div class="profile-image">
+                <img src="assets/avadh bajaj half.jpeg" alt="Avadh Bajaj">
+            </div>
+            <div class="profile-info">
+                <h2>hello@avadhbajaj.com</h2>
+                <h2>Khargone, India</h2>
+                <p class="copyright">© 2026. All Rights Reserved</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <a href="index.html#contact" class="btn-primary">
+                <i class="far fa-envelope"></i> Let's Connect
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <a href="index.html#portfolio" class="btn-outline" style="margin-bottom: 30px; display: inline-block;">
+                    <i class="fa fa-arrow-left"></i> Back to Home
+                </a>
+                <span class="category">eCommerce | Fitness</span>
+                <h1>Dirty Squads <span>Fitness</span></h1>
+                <p>Performance-driven supplements and community platform.</p>
+            </header>
+
+            <section class="single-portfolio-content">
+                <img src="assets/dirtysquats.png" alt="Dirty Squads Hero" style="width: 100%; border-radius: 30px; margin-bottom: 50px; border: 1px solid var(--border-color);">
+                
+                <div class="project-details" style="display: grid; grid-template-columns: 2fr 1fr; gap: 50px;">
+                    <div class="description">
+                        <h2>Project Overview</h2>
+                        <p style="margin: 20px 0; line-height: 1.8; color: var(--text-muted);">
+                            Dirty Squads is a performance-driven supplement brand built for serious athletes. The platform combines product sales with a powerful affiliate system that turns users into brand ambassadors and creates a strong community-driven growth model.
+                        </p>
+                        
+                        <div style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px;">
+                            <h2>Core System</h2>
+                            <p style="margin: 15px 0; line-height: 1.8; color: var(--text-muted);">
+                                We developed a clean, conversion-focused eCommerce store for supplements like proteins, creatine, and pre-workouts. Alongside the storefront, a robust affiliate system allows athletes to earn through referrals.
+                            </p>
+                        </div>
+
+                        <div style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px;">
+                            <h2>Key Features</h2>
+                            <ul style="list-style: none; padding: 0; margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <li style="color: var(--text-muted); font-size: 14px;"><i class="fa fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Affiliate Earning System</li>
+                                <li style="color: var(--text-muted); font-size: 14px;"><i class="fa fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Strong Conversion UI</li>
+                                <li style="color: var(--text-muted); font-size: 14px;"><i class="fa fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Bold Brand Identity</li>
+                                <li style="color: var(--text-muted); font-size: 14px;"><i class="fa fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Mobile-First Experience</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="meta-info" style="background: var(--card-bg); padding: 30px; border-radius: 20px; border: 1px solid var(--border-color); height: fit-content;">
+                        <h3>Project Info</h3>
+                        <ul style="list-style: none; padding: 0; margin-top: 20px;">
+                            <li style="margin-bottom: 15px; font-size: 14px;"><strong>Industry:</strong> Fitness</li>
+                            <li style="margin-bottom: 15px; font-size: 14px;"><strong>Model:</strong> eCommerce</li>
+                            <li style="margin-bottom: 15px; font-size: 14px;"><strong>Year:</strong> 2026</li>
+                            <li style="margin-bottom: 15px; font-size: 14px;"><strong>Tech:</strong> Shopify, custom automation</li>
+                        </ul>
+                        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                            <a href="https://dirtysquads.com" target="_blank" class="btn-primary" style="display: block; text-align: center; width: 100%;">
+                                Visit Website <i class="fa fa-external-link-alt" style="margin-left: 8px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="body">
-      <div class="section"><p class="section-title">About the project</p><p class="about-text">Dirty Squads is a performance-driven supplement brand built for serious athletes. The platform combines product sales with a powerful affiliate system that turns users into brand ambassadors and creates a strong community-driven growth model.</p></div>
-      <div class="section">
-        <p class="section-title">Core system</p>
-        <div class="grid">
-          <div class="box"><div class="box-title">Product Store</div><div class="box-desc">Protein, creatine, pre-workout & fat burners with clean UX.</div></div>
-          <div class="box"><div class="box-title">Join The Squad</div><div class="box-desc">Affiliate onboarding with earning & referral system.</div></div>
-        </div>
-      </div>
-      <div class="section">
-        <p class="section-title">Key features</p>
-        <div class="features-grid">
-          <div class="feature"><div class="dot"></div><div><div class="feature-name">Affiliate System</div><div class="feature-desc">Earn through referrals</div></div></div>
-          <div class="feature"><div class="dot"></div><div><div class="feature-name">Conversion UI</div><div class="feature-desc">Strong CTA structure</div></div></div>
-          <div class="feature"><div class="dot"></div><div><div class="feature-name">Brand Identity</div><div class="feature-desc">Bold aggressive design</div></div></div>
-          <div class="feature"><div class="dot"></div><div><div class="feature-name">Mobile First</div><div class="feature-desc">Optimized UX</div></div></div>
-        </div>
-      </div>
-      <div class="section"><p class="section-title">Products</p><div class="tags"><span class="tag">Protein</span><span class="tag">Creatine</span><span class="tag">Pre-workout</span><span class="tag">Fat Burner</span></div></div>
-      <div class="section">
-        <p class="section-title">Social proof</p>
-        <div class="rating-row">
-          <div class="rating-score">4.8</div>
-          <div>
-            <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
-            <div style="font-size:12px;color:#999;">Strong engagement</div>
-          </div>
-        </div>
-        <div class="review">“This feels like a squad, not just a supplement brand.”</div>
-      </div>
-    </div>
-    <div class="footer"><span class="footer-status">Live · dirtysquads.com</span><a href="https://dirtysquads.com" class="footer-link" target="_blank">Visit Website →</a></div>
-  </div>
-</div>
+
+    <script src="main.js"></script>
 </body>
 </html>

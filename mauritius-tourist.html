@@ -1,95 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mauritius Tourist — Case Study</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: #f8fafc; color: #1e293b; font-family: 'Inter', sans-serif; }
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px;
-    display: flex; justify-content: space-between; align-items: center;
-    background: rgba(248, 250, 252, 0.82); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0;
-  }
-  .nav-logo { font-size: 14px; text-transform: uppercase; color: #023e8a; text-decoration: none; letter-spacing: 0.1em; }
-  .nav-back { font-size: 11px; text-transform: uppercase; color: #0077b6; text-decoration: none; border: 1px solid rgba(0,119,182,0.4); padding: 5px 12px; border-radius: 4px; }
-  .card-container { display: flex; justify-content: center; padding: 120px 20px 80px; }
-  .card { max-width: 680px; border: 0.5px solid #E2E8F0; border-radius: 16px; overflow: hidden; background: #FFFFFF; color: #1E293B; }
-  .hero { background: linear-gradient(135deg, #023E8A, #0077B6); padding: 44px 40px 36px; position: relative; }
-  .hero::after { content: ''; position: absolute; top: -60px; right: -60px; width: 240px; height: 240px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); }
-  .badge { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #CAF0F8; border: 0.5px solid rgba(202,240,248,0.5); padding: 4px 10px; border-radius: 4px; margin-bottom: 18px; display: inline-block; }
-  h1 { font-size: 32px; font-weight: 500; color: #fff; }
-  h1 em { color: #90E0EF; font-style: normal; }
-  .hero-sub { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #CAF0F8; margin: 10px 0 20px; }
-  .quote { border-left: 2px solid #00B4D8; padding-left: 14px; font-style: italic; font-size: 14px; color: #E0F7FA; margin-bottom: 26px; }
-  .meta-row { display: flex; flex-wrap: wrap; gap: 20px; }
-  .meta-label { font-size: 10px; text-transform: uppercase; color: #90E0EF; }
-  .meta-value { font-size: 13px; color: #fff; }
-  .body { padding: 0 40px 36px; }
-  .section { padding-top: 24px; border-top: 0.5px solid #E2E8F0; margin-top: 24px; }
-  .section-title { font-size: 10px; text-transform: uppercase; color: #64748B; margin-bottom: 14px; }
-  .about-text { font-size: 14px; line-height: 1.7; color: #475569; }
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .box { border: 0.5px solid #E2E8F0; border-radius: 10px; padding: 16px; background: #F8FAFC; }
-  .box-title { font-size: 14px; color: #0077B6; margin-bottom: 6px; font-weight: 600; }
-  .box-desc { font-size: 12px; color: #64748B; }
-  .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .feature { display: flex; gap: 10px; padding: 12px; border: 0.5px solid #E2E8F0; border-radius: 10px; background: #F8FAFC; }
-  .dot { width: 6px; height: 6px; background: #00B4D8; border-radius: 50%; margin-top: 6px; }
-  .feature-name { font-size: 12px; color: #1E293B; font-weight: 600; }
-  .feature-desc { font-size: 11px; color: #64748B; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tag { font-size: 11px; padding: 4px 10px; border-radius: 20px; border: 0.5px solid #E2E8F0; background: #F8FAFC; color: #64748B; }
-  .footer { display: flex; justify-content: space-between; padding: 16px 40px; border-top: 0.5px solid #E2E8F0; background: #F8FAFC; }
-  .footer-link { font-size: 12px; color: #0077B6; text-decoration: none; border-bottom: 0.5px solid #0077B6; }
-  @media (max-width: 600px) { .grid, .features-grid { grid-template-columns: 1fr; } h1 { font-size: 28px; } .hero { padding: 32px 24px; } .body { padding: 0 24px 32px; } nav { padding: 16px 20px; } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mauritius Tourist - Maruti Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<nav>
-  <a href="index.html" class="nav-logo">Maruti Digital</a>
-  <a href="index.html#portfolio" class="nav-back">← Back to Portfolio</a>
-</nav>
+    <div class="theme-toggle" id="theme-toggle" title="Toggle Light/Dark Mode">
+        <i class="fa fa-moon"></i>
+    </div>
 
-<div class="card-container">
-  <div class="card">
-    <div class="hero">
-      <div class="badge">Portfolio Case Study</div>
-      <h1><em>Mauritius</em> Tourist</h1>
-      <p class="hero-sub">Travel · Destinations · Experiences · Luxury</p>
-      <div class="quote">Discover paradise through curated travel experiences and island adventures.</div>
-      <div class="meta-row">
-        <div><div class="meta-label">Industry</div><div class="meta-value">Travel & Tourism</div></div>
-        <div><div class="meta-label">Focus</div><div class="meta-value">Destination Discovery</div></div>
-        <div><div class="meta-label">Content</div><div class="meta-value">Experiences & Guides</div></div>
-        <div><div class="meta-label">Audience</div><div class="meta-value">Global Travelers</div></div>
-      </div>
+    <div class="container">
+        <aside class="left-sidebar">
+            <div class="sidebar-header">
+                <div class="logo-text">Maruti Digital</div>
+                <span class="role">Website & SaaS Developer</span>
+            </div>
+            <div class="profile-image">
+                <img src="assets/avadh bajaj half.jpeg" alt="Avadh Bajaj">
+            </div>
+            <div class="profile-info">
+                <h2>hello@avadhbajaj.com</h2>
+                <h2>Khargone, India</h2>
+                <p class="copyright">© 2026. All Rights Reserved</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <a href="index.html#contact" class="btn-primary">
+                <i class="far fa-envelope"></i> Let's Connect
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <a href="index.html#portfolio" class="btn-outline" style="margin-bottom: 30px; display: inline-block;">
+                    <i class="fa fa-arrow-left"></i> Back to Home
+                </a>
+                <span class="category">Travel | Tourism | Destinations</span>
+                <h1>Mauritius <span>Tourist</span></h1>
+                <p>Discover paradise through curated island experiences.</p>
+            </header>
+
+            <section class="single-portfolio-content">
+                <img src="assets/mauritiustourist.png" alt="Mauritius Hero" style="width: 100%; border-radius: 30px; margin-bottom: 50px; border: 1px solid var(--border-color);">
+                
+                <div class="project-details" style="display: grid; grid-template-columns: 2fr 1fr; gap: 50px;">
+                    <div class="description">
+                        <h2>Project Overview</h2>
+                        <p style="margin: 20px 0; line-height: 1.8; color: var(--text-muted);">
+                            Mauritius Tourist is a destination-focused platform designed to help travelers explore one of the world’s most beautiful island nations. The website highlights beaches, activities, and travel planning resources.
+                        </p>
+                        
+                        <div style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px;">
+                            <h2>Core System</h2>
+                            <p style="margin: 15px 0; line-height: 1.8; color: var(--text-muted);">
+                                A visual storytelling approach with an integrated destination discovery engine. We prioritized mobile-first design for travelers on the go.
+                            </p>
+                        </div>
+
+                        <div style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px;">
+                            <h2>Key Features</h2>
+                            <ul style="list-style: none; padding: 0; margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                <li style="color: var(--text-muted); font-size: 14px;"><i class="fa fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Visual Experiences</li>
+                                <li style="color: var(--text-muted); font-size: 14px;"><i class="fa fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Travel Guides</li>
+                                <li style="color: var(--text-muted); font-size: 14px;"><i class="fa fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Interactive Map features</li>
+                                <li style="color: var(--text-muted); font-size: 14px;"><i class="fa fa-check" style="color: var(--primary-color); margin-right: 10px;"></i> Mobile-First UI</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="meta-info" style="background: var(--card-bg); padding: 30px; border-radius: 20px; border: 1px solid var(--border-color); height: fit-content;">
+                        <h3>Project Info</h3>
+                        <ul style="list-style: none; padding: 0; margin-top: 20px;">
+                            <li style="margin-bottom: 15px; font-size: 14px;"><strong>Industry:</strong> Tourism</li>
+                            <li style="margin-bottom: 15px; font-size: 14px;"><strong>Audience:</strong> Global</li>
+                            <li style="margin-bottom: 15px; font-size: 14px;"><strong>Year:</strong> 2026</li>
+                            <li style="margin-bottom: 15px; font-size: 14px;"><strong>Tech:</strong> Travel Discovery Engine</li>
+                        </ul>
+                        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                            <a href="https://mauritiustourist.com" target="_blank" class="btn-primary" style="display: block; text-align: center; width: 100%;">
+                                Visit Website <i class="fa fa-external-link-alt" style="margin-left: 8px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="body">
-      <div class="section"><div class="section-title">About the project</div><div class="about-text">Mauritius Tourist is a destination-focused platform designed to help travelers explore one of the world’s most beautiful island nations. The website highlights beaches, adventure activities, cultural experiences, and travel planning resources, creating a seamless journey from inspiration to booking.</div></div>
-      <div class="section">
-        <div class="section-title">Core system</div>
-        <div class="grid">
-          <div class="box"><div class="box-title">Destination Explorer</div><div class="box-desc">Regions, beaches & attractions</div></div>
-          <div class="box"><div class="box-title">Travel Planning</div><div class="box-desc">Guides, tips & booking flow</div></div>
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-title">Key features</div>
-        <div class="features-grid">
-          <div class="feature"><div class="dot"></div><div><div class="feature-name">Visual Storytelling</div><div class="feature-desc">Image-driven layout</div></div></div>
-          <div class="feature"><div class="dot"></div><div><div class="feature-name">Destination Navigation</div><div class="feature-desc">Easy exploration system</div></div></div>
-          <div class="feature"><div class="dot"></div><div><div class="feature-name">Travel Guides</div><div class="feature-desc">Helpful planning content</div></div></div>
-          <div class="feature"><div class="dot"></div><div><div class="feature-name">Responsive UI</div><div class="feature-desc">Mobile-first experience</div></div></div>
-        </div>
-      </div>
-      <div class="section"><div class="section-title">Experiences</div><div class="tags"><span class="tag">Beaches</span><span class="tag">Adventure</span><span class="tag">Culture</span><span class="tag">Luxury</span><span class="tag">Nature</span></div></div>
-    </div>
-    <div class="footer"><span>Live · mauritiustourist.com</span><a href="https://mauritiustourist.com/" target="_blank" class="footer-link">Visit Website →</a></div>
-  </div>
-</div>
+
+    <script src="main.js"></script>
 </body>
 </html>
