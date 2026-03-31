@@ -503,10 +503,21 @@ section {
 }
 
 /* Testimonials */
+.testimonials-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .testimonial-item {
     border: 1px solid var(--border-color);
     padding: 40px;
     border-radius: 30px;
+    transition: var(--transition);
+}
+
+.testimonial-item:hover {
+    border-color: var(--primary-color);
 }
 
 .client-info {
